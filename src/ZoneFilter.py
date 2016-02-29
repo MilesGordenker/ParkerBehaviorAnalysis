@@ -1,12 +1,15 @@
 """
 Used to check whether a given zone matches certain criteria
 
-When adding new categories to the ZoneFilter, be sure to:
+When adding new operators to the ZoneFilter, be sure to:
 
-add a new parameter
-add a matching new internal variable
-add a new method
+add an internal variable
+set the variable to false in the constructor
 add an if statement calling the new method to isZoneValid
+
+When extending the ZoneFilter to check for things other than operator:
+Add a new method to ZoneFilter Ex: isXValid()
+Make sure isXValid() is called on every record that passes through the ParkerList
 """
 
 class ZoneFilter:
